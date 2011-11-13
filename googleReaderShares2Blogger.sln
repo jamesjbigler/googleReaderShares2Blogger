@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core Client", "core\Core Client.csproj", "{B6F6D938-0D45-42BA-8A67-55D92EF03995}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common Data Extensions", "extensions\Common Data Extensions.csproj", "{21BCB644-F9C3-4ADC-8BE1-4E55C6565011}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogger", "blogger\Blogger.csproj", "{BE48B106-7766-494C-B0F1-00989ACF2480}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "client", "client\client.csproj", "{15A079F5-A155-4F93-BEEC-B1FD79790D2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		ASP|Any CPU = ASP|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15A079F5-A155-4F93-BEEC-B1FD79790D2D}.ASP|Any CPU.ActiveCfg = ASP|Any CPU
+		{15A079F5-A155-4F93-BEEC-B1FD79790D2D}.ASP|Any CPU.Build.0 = ASP|Any CPU
+		{15A079F5-A155-4F93-BEEC-B1FD79790D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A079F5-A155-4F93-BEEC-B1FD79790D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A079F5-A155-4F93-BEEC-B1FD79790D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A079F5-A155-4F93-BEEC-B1FD79790D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21BCB644-F9C3-4ADC-8BE1-4E55C6565011}.ASP|Any CPU.ActiveCfg = ASP|Any CPU
+		{21BCB644-F9C3-4ADC-8BE1-4E55C6565011}.ASP|Any CPU.Build.0 = ASP|Any CPU
+		{21BCB644-F9C3-4ADC-8BE1-4E55C6565011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21BCB644-F9C3-4ADC-8BE1-4E55C6565011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21BCB644-F9C3-4ADC-8BE1-4E55C6565011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21BCB644-F9C3-4ADC-8BE1-4E55C6565011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6F6D938-0D45-42BA-8A67-55D92EF03995}.ASP|Any CPU.ActiveCfg = ASP|Any CPU
+		{B6F6D938-0D45-42BA-8A67-55D92EF03995}.ASP|Any CPU.Build.0 = ASP|Any CPU
+		{B6F6D938-0D45-42BA-8A67-55D92EF03995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F6D938-0D45-42BA-8A67-55D92EF03995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6F6D938-0D45-42BA-8A67-55D92EF03995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F6D938-0D45-42BA-8A67-55D92EF03995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE48B106-7766-494C-B0F1-00989ACF2480}.ASP|Any CPU.ActiveCfg = ASP|Any CPU
+		{BE48B106-7766-494C-B0F1-00989ACF2480}.ASP|Any CPU.Build.0 = ASP|Any CPU
+		{BE48B106-7766-494C-B0F1-00989ACF2480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE48B106-7766-494C-B0F1-00989ACF2480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE48B106-7766-494C-B0F1-00989ACF2480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE48B106-7766-494C-B0F1-00989ACF2480}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = client\client.csproj
+	EndGlobalSection
+EndGlobal
