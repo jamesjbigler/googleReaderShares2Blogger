@@ -1,0 +1,11 @@
+I created this app because Google removed the Note In Reader functionality from Google Reader.  To replace this this functionality I am using the Blog This bookmarklet and adding my shared items to my blog.  
+
+To use this tool open up reader and go to settings.  Go to the export tab and download your shared items in the google format.  Then run this app.  
+
+You need to enter your username, password.  Then select your blog (may need to click twice).    
+
+Blogger only lets you import 50 posts a day.  In the Skip To Post field enter 0 the first time you run the tool.  This will import the first 50 posts.  The next day enter 50 and the tool will import posts 50-100.  The third day enter 100 and so on.
+
+Then open your downloaded file.  You should see the posts it will import.
+
+Next click the Import button.  It will take a couple minutes.  Go to your blog's homepage to see when it is done.
