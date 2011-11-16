@@ -3,6 +3,8 @@ using NDesk.Options;
 using Client;
 using System.Threading;
 using System.Linq;
+using Google.GData.Client;
+using Google.GData.Blogger;
 
 namespace Console
 {

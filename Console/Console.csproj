@@ -45,5 +45,17 @@
       <Project>{15A079F5-A155-4F93-BEEC-B1FD79790D2D}</Project>
       <Name>client</Name>
     </ProjectReference>
+    <ProjectReference Include="..\blogger\Blogger.csproj">
+      <Project>{BE48B106-7766-494C-B0F1-00989ACF2480}</Project>
+      <Name>Blogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\core\Core Client.csproj">
+      <Project>{B6F6D938-0D45-42BA-8A67-55D92EF03995}</Project>
+      <Name>Core Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\extensions\Common Data Extensions.csproj">
+      <Project>{21BCB644-F9C3-4ADC-8BE1-4E55C6565011}</Project>
+      <Name>Common Data Extensions</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
