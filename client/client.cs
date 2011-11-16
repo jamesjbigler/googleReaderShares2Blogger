@@ -108,7 +108,7 @@ namespace Client
             this.BloggerURI.Name = "BloggerURI";
             this.BloggerURI.Size = new System.Drawing.Size(296, 20);
             this.BloggerURI.TabIndex = 1;
-            this.BloggerURI.Text = "http://www.blogger.com/feeds/default/blogs";
+            this.BloggerURI.Text = BlogLocator.BloggerFeedUrl;
 			this.BloggerURI.ReadOnly = true;
 
 			
@@ -257,48 +257,19 @@ namespace Client
 
         private void RefreshFeedList()
         {
-            string bloggerURI  = this.BloggerURI.Text;
             string userName =    this.UserName.Text;
             string passWord =    this.Password.Text;
 
-            BloggerQuery query = new BloggerQuery();
-            BloggerService service = new BloggerService("BloggerSampleApp.NET");
-
-            if (userName != null && userName.Length > 0)
-            {
-                service.Credentials = new GDataCredentials(userName, passWord);
-            }
-
-            // only get event's for today - 1 month until today + 1 year
-
-            query.Uri = new Uri(bloggerURI);
-
             Cursor.Current = Cursors.WaitCursor; 
-
-            // start repainting
             this.FeedChooser.BeginUpdate(); 
-
-            BloggerFeed bloggerFeed = service.Query(query);
-            // Display a wait cursor while the TreeNodes are being created.
+			
+			BlogLocator blogLocator = new BlogLocator(userName, passWord);
 
             this.FeedChooser.DisplayMember = "Title"; 
 
-            while (bloggerFeed != null && bloggerFeed.Entries.Count > 0)
+            foreach (BloggerEntry entry in blogLocator.Blogs) 
             {
-                foreach (BloggerEntry entry in bloggerFeed.Entries) 
-                {
-                    int iIndex = this.FeedChooser.Items.Add(new ListEntry(entry)); 
-                }
-                // do the chunking...
-                if (bloggerFeed.NextChunk != null) 
-                {
-                    query.Uri = new Uri(bloggerFeed.NextChunk); 
-                    bloggerFeed = service.Query(query);
-                }
-                else 
-                {
-                    bloggerFeed = null; 
-                }
+                int iIndex = this.FeedChooser.Items.Add(new ListEntry(entry)); 
             }
 
             if (this.FeedChooser.Items.Count > 0) 
@@ -311,12 +282,8 @@ namespace Client
             }
             
             
-            // Reset the cursor to the default for all controls.
             Cursor.Current = Cursors.Default;
-            // End repainting the combobox
             this.FeedChooser.EndUpdate();
-        
-            
         }
 
 
@@ -389,25 +356,14 @@ namespace Client
 
                 if (entry != null) 
                 {
-                    // find the link.rel==feed uri and refresh the treeview
-                    foreach (AtomLink link in entry.Links) 
-                    {
-                        if (link.Rel == BaseNameTable.ServicePost) 
-						{
-                            this.feedUri = link.HRef.ToString(); 
-                            break;
-                        }
-                    }
+                    this.feedUri = entry.PostUri.Content; 
 				}
             }
-        }
+        }		
     }
 
 
-    /// <summary>
-    /// little helper class to put an atomentry into a combobox
-    /// </summary>
-    public class ListEntry 
+	public class ListEntry 
     {
         private BloggerEntry entry;
 
@@ -432,7 +388,7 @@ namespace Client
         {
             return this.entry != null ? this.entry.Title.Text : "No Entry"; 
         }
-    }
+    }    
 
 
 }

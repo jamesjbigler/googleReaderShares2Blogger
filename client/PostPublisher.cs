@@ -25,11 +25,14 @@ namespace Client
         {
 			foreach(BloggerEntry post in posts)
 			{
-				service.Insert(new Uri(postUrl), post);
+				Publish(post);
 			}
         }
 		
-		
+		public void Publish(BloggerEntry post)
+		{
+			service.Insert(new Uri(postUrl), post);
+		}
 	}
 }
 

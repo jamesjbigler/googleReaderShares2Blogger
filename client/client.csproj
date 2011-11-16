@@ -103,6 +103,7 @@
     <Compile Include="client.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BlogLocator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
